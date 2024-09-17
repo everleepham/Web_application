@@ -1,0 +1,102 @@
+@import url(./hero.css);
+@import url(./feature.css);
+@import url(./footer.css);
+
+
+header img {
+    width: 45px;
+    height: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Sofia", sans-serif;
+    min-height: 100vh;
+  }
+
+header {
+    background-color: rgb(208, 231, 252);
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    height: 60px;
+    padding: 0 3em;
+    font-size: small;
+    position: relative;
+}
+
+#toggle-btn {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    margin-left: auto; 
+    color: rgb(22, 41, 83);
+}
+
+header .navBar ul {
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 1em;
+    border-radius: 8px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header .navBar li {
+    height: 30px;
+    margin: 10px 0;
+
+}
+
+
+header .navBar {
+    position: absolute;
+    top: 70px; 
+    right: 0; 
+    width: 200px; 
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 1em;
+    border-radius: 8px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0; 
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+header .navBar a {
+    text-decoration: none;
+    color: rgb(22, 41, 83);
+    font-size: 1.1em;
+    height: 100%;
+    padding: 0 30px;
+    align-items: center;
+
+}
+
+header img {
+    border-radius: 100%;
+    max-width: 80px;
+    object-fit: cover; 
+}
+
+header .navBar a:hover {
+    color: rgb(31, 56, 120);
+    background-color: rgb(196, 215, 232);
+    border-radius: 5px;
+}
+
+header .navBar.show {
+    display: block; 
+    max-height: 500px;
+    opacity: 1; 
+
+}
+
